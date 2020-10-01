@@ -2,6 +2,7 @@ package nl.novi.javaprogrammeren.three;
 
 public class Phone {
     private String phoneNumber;
+    final private String countryCodeNL = "+31";
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -12,7 +13,7 @@ public class Phone {
     }
 
     public String getInternationalPhoneNumber() {
-        String phoneNumber = "+31";
+        String phoneNumber = countryCodeNL + getPhoneNumber();
 
         return phoneNumber;
     }
